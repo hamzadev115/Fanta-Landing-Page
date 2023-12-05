@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+}
+:root{
+    --maincolor:#F5831F;
+    --secondcolor:#1238c1;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+*::selection{
+    background-color: #fff;
+    color: #F5831F;
+
+}
+#main::-webkit-scrollbar{
+    display: none;
+}
+#cursor{
+    width: 10px;
+    height: 10px;
+    background-color:var(--secondcolor);
+    border-radius: 50px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 999;
+}
+#main{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background:linear-gradient(120deg ,#F5831F, #f5661f);
+}
+.nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0vw 5vw;
+    align-items: center;
+    position: fixed;
+    background:linear-gradient(120deg ,#F5831F, #f5661f);
+    z-index: 99;
+}
+.nav .logo img{
+    width: 100px;
+    object-fit: cover;
+}
+.nav .menu a{
+    display: inline-block;
+    margin:0.5vw 1.5vw;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2vw;
+    position: relative;
+}
+.menu a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2.5px;
+    bottom: 0;
+    background-color: #fff;
+    transition: width .3s ease;
+}
+.menu a:hover::after{
+    width: 100%;
+}
+.nav i{
+    font-size: 2vw;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.hum{
+    display: none;
+}
+.user i{
+    font-size: 20px;
+    font-weight: 400;
+}
+.mobileuser{
+    display: none;
+}
+.hero {
+  padding-top: 100px; 
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+.hero h1{
+    font-size: 23vw;
+    z-index: 2;
+  -webkit-text-fill-color: #f5661f;
+  -webkit-text-stroke-width: 2.5px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+#fanta{
+    width: 30vw;
+    height: 30vw;
+    z-index: 2;
+    position: absolute;
+}
+#orange{
+    width: 15vw;
+    position: absolute;
+    top: 15%;
+    left: 32%;
+    z-index: 1;
+}
+#orangegroup{
+    width: 18vw;
+    position: absolute;
+    z-index: 3;
+    top: 65%;
+    right: 30%;
+}
+.about{
+    width: 100%;
+    min-height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    gap: 10px;
+}
+.aboutleft{
+    width: 50%;
+    height: 100%;
+    padding: 0 20px;
+    position: relative;
+}
+.aboutleft svg{
+    width:40vw;
+    position: relative;
+}
+.aboutleft img{
+    width: 16vw;
+    position: absolute;
+    left: 20%;
+    top:-8%;
+    rotate: 12deg;
+}
+.aboutright{
+    width: 50%;
+    height: 100%;
+    padding: 100px  50px 50px 30px;
+}
+.aboutright h1{
+    color: #fff;
+    font-size: 1.7vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+
+}
+.aboutright p{
+    color: #fff;
+    text-align: justify;
+    font-size: 1.1vw;
+    padding-bottom: 25px;
+}
+.aboutright a{
+    background-color: #1238c1;
+    color: #fff;
+    border-radius: 3px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+}
+.product{
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+    align-items: center;
+    gap: 50px;
+}
+#card{
+    width: 100%;
+    min-height: 60vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+#card img{
+    width: 25vw;
+    height: 30vw;
+    object-fit: contain;
+    margin-bottom: -10px;
+}
+#card a{
+    background-color: #1238c1;
+    color: #fff;
+    border-radius: 3px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+}
+.card1{
+    background-color: #f0403d;
+    border-radius: 30px;
+}
+.card2{
+    background-color: #f59900;
+    border-radius: 30px;
+}
+.card3{
+    background-color: #03ac6b;
+    border-radius: 30px;
+}
+#card h2{
+    color: #fff;
+    font-size: 2vw;
+    margin: 0px 0px 20px 0px;
+}
+#footer{
+    width: 100%;
+    height: 10vh;
+    padding: 50px;
+}
+#footer h2{
+    text-align: center;
+    color: #fff;
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    gap: 20px;
+    width: 100%;
+    height: 30vh;
+    overflow-x: auto !important;
+    margin-top: 30px;
+}
+.info::-webkit-scrollbar{
+    display: none;
+}
+.info h2{
+    font-size: 8vw;
+    color: #fff;
+    animation: scroll 10s linear infinite;
+}
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+    
+}
+
+
+@media (max-width:980px) {
+    .nav{
+        padding: 10px;
+        height: 90px;
+        z-index: 999;
+    }
+    .nav .logo img {
+    width: 10vw;
+    }
+    .nav .menu a{
+        font-size: 1.7vw;
+    }
+    #fanta{
+    width: 40vw;
+    height:40vw;
+    }
+    #orange{
+        top:28%;
+        width: 18vw;
+    }
+    .about{
+        padding: 0;
+    }
+    .aboutright{
+        padding-top: 6vh;
+    }
+    .aboutright h1{
+        font-size: 3vw;
+    }
+    .aboutright p{
+        font-size: 1.5vw;
+    }
+}
+@media (max-width:480px) {
+    .nav{
+        height: 90px;
+        z-index: 999;
+        padding-top: 20px;
+    }
+    .hum{
+        display: block;
+    }
+    .nav .menu {
+    transform:translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+    width: 100%;
+    height: 50vh;
+    background-color: #F5831F;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    }
+    .nav .active{
+       transform:translateX(0);
+       opacity: 1;
+       visibility: visible;
+    }
+    .nav .menu a{
+        font-size: 4vw;
+        color: #fff;
+    }
+    .nav .logo img{
+        width: 30vw;
+    }
+    .logo{
+        z-index: 999;
+    }
+    .nav .hum i{
+        font-size: 8vw;
+    }
+    .hum{
+        z-index: 999;
+    }
+    .user{
+        display: none;
+    }
+    .mobileuser{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background-color: #1238c1;
+        padding: 1.5vw;
+        border-radius: 3px;
+    }
+    .mobileuser i{
+    display: block;
+    font-size: 20px;
+    }
+    .mobileuser a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2.5px;
+    bottom: 0;
+    background-color: #1238c1;
+    transition: width .3s ease;
+    }
+    .hero{
+        min-height: 80vh;
+        padding-top: 80px;
+    }
+    .hero h1{
+        font-size: 29vw;
+    }
+    #fanta{
+        width: 70vw;
+        height: 70vw;
+    }
+    #orange{
+        top:22%;
+        left: 12%;
+        width: 30vw;
+    }
+    #orangegroup{
+        width: 40vw;
+        top: 55%;
+        right: 12%;
+    }
+    .about{
+        flex-direction: column;
+        /* padding-top: 70px; */
+    }
+    .aboutleft{
+        width: 100%;
+        text-align: center;
+        padding: 0 10px;
+        margin-top: -30px;
+    }
+    .aboutleft svg{
+        width: 100vw;
+    }
+    .aboutright{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .aboutright h1{
+        font-size: 6vw;
+    }
+    .aboutright p{
+        font-size: 4vw;
+    }
+    .product{
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+    #card img{
+        width: 100vw;
+        height: 40vh;
+    }
+    #card h2{
+        margin: 20px 0px;
+        font-size: 6vw;
+    }
+    #footer h2{
+        font-size: 5vw;
+    }
+    .info{
+        height: 10vh;
+    }
+    .info h2{
+        font-size: 10vw;
+    }
+    .aboutleft img {
+    width: 30vw;
+    position: absolute;
+    left: 30%;
+    top: 6%;
+    rotate: 12deg;
+}
+}
